@@ -1,0 +1,124 @@
+{
+  "dingdanModule": {
+    "dingdanData": {
+      "allMoney": 562791,
+      "weekDingdan": {
+        "doneNum": 6292,
+        "untreatedNum": 767
+      },
+      "year": "2019",
+      "online":{
+        "money": 5113614,
+        "peopleNum": 11253
+      },
+      "offline":{
+        "money": 449177,
+        "dingdanNum": 22202
+      }
+    },
+    "mapData": {
+      "dataList1":[
+        { "name": "北京", "value": 666 },
+        { "name": "天津", "value": 666 },
+        { "name": "上海", "value": 666 },
+        { "name": "重庆", "value": 666 },
+        { "name": "河北", "value": 666 },
+        { "name": "河南", "value": 666 },
+        { "name": "云南", "value": 666 },
+        { "name": "辽宁", "value": 666 },
+        { "name": "黑龙江", "value": 666 },
+        { "name": "湖南", "value": 666 },
+        { "name": "安徽", "value": 666 },
+        { "name": "山东", "value": 666 },
+        { "name": "新疆", "value": 666 },
+        { "name": "江苏", "value": 666 },
+        { "name": "浙江", "value": 666 },
+        { "name": "江西", "value": 666 },
+        { "name": "湖北", "value": 666 },
+        { "name": "广西", "value": 666 },
+        { "name": "甘肃", "value": 666 },
+        { "name": "山西", "value": 666 },
+        { "name": "内蒙古", "value": 666 },
+        { "name": "陕西", "value": 666 },
+        { "name": "吉林", "value": 666 },
+        { "name": "福建", "value": 666 },
+        { "name": "贵州", "value": 666 },
+        { "name": "广东", "value": 666 },
+        { "name": "青海", "value": 666 },
+        { "name": "西藏", "value": 666 },
+        { "name": "四川", "value": 666 },
+        { "name": "宁夏", "value": 666 },
+        { "name": "海南", "value": 666 },
+        { "name": "台湾", "value": 666 },
+        { "name": "香港", "value": 666 },
+        { "name": "澳门", "value": 666 }
+      ],
+      "dataList2":[
+        { "name": "北京", "value": 777 },
+        { "name": "天津", "value": 777 },
+        { "name": "上海", "value": 777 },
+        { "name": "重庆", "value": 777 },
+        { "name": "河北", "value": 777 },
+        { "name": "安徽", "value": 777 },
+        { "name": "新疆", "value": 777 },
+        { "name": "浙江", "value": 777 },
+        { "name": "江西", "value": 777 },
+        { "name": "山西", "value": 777 },
+        { "name": "内蒙古", "value": 777 },
+        { "name": "吉林", "value": 777 },
+        { "name": "福建", "value": 777 },
+        { "name": "广东", "value": 777 },
+        { "name": "西藏", "value": 777 },
+        { "name": "四川", "value": 777 },
+        { "name": "宁夏", "value": 777 },
+        { "name": "香港", "value": 777 },
+        { "name": "澳门", "value": 777 }
+      ],
+      "dataList3":[
+        { "name": "北京", "value": 555 },
+        { "name": "天津", "value": 555 },
+        { "name": "上海", "value": 555 },
+        { "name": "广东", "value": 555 },
+        { "name": "台湾", "value": 555 },
+        { "name": "香港", "value": 555 },
+        { "name": "澳门", "value": 555 }
+      ]
+    },
+    "cateList": ["T恤", "衬衫", "裙子", "毛衫", "外套", "裤子", "内衣"],
+    "productList": [
+      { "xinghao": "3508T恤", "bili": "16%" },
+      { "xinghao": "3508T恤", "bili": "16%" },
+      { "xinghao": "3508T恤", "bili": "16%" },
+      { "xinghao": "3508T恤", "bili": "16%" },
+      { "xinghao": "3508T恤", "bili": "16%" },
+      { "xinghao": "3508T恤", "bili": "16%" },
+      { "xinghao": "3508T恤", "bili": "16%" },
+      { "xinghao": "3508T恤", "bili": "16%" },
+      { "xinghao": "3508T恤", "bili": "16%" },
+      { "xinghao": "3508T恤", "bili": "16%" }
+    ],
+    "faceList": [
+      { "ageRange": "55岁-65岁", "bili": "15" },
+      { "ageRange": "55岁-65岁", "bili": "35" },
+      { "ageRange": "55岁-65岁", "bili": "75" },
+      { "ageRange": "55岁-65岁", "bili": "25" },
+      { "ageRange": "55岁-65岁", "bili": "45" },
+      { "ageRange": "55岁-65岁", "bili": "15" }
+    ],
+    "areaList": [
+      { "province": "广东", "value": "99999" },
+      { "province": "江苏", "value": "88888" },
+      { "province": "江西", "value": "77777" },
+      { "province": "浙江", "value": "66666" },
+      { "province": "湖南", "value": "55555" },
+      { "province": "湖北", "value": "44444" },
+      { "province": "四川", "value": "33333" },
+      { "province": "湖南", "value": "22222" }
+    ],
+    "pieDataList": [
+      { "name": "手机", "value": 335 },
+      { "name": "门店", "value": 310 },
+      { "name": "PC", "value": 234 }
+    ]
+  }
+}

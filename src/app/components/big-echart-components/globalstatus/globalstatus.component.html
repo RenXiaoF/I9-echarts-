@@ -1,0 +1,115 @@
+<div class="wrap-gs">
+    <!-- 标题 -->
+    <!-- <div class="gs-title">
+        <span class="bg1"></span>
+        <span class="bg2">全国客户的动销、订单情况</span>
+        <span class="bg3"></span>
+    </div> -->
+
+    <!-- 品类排名 -->
+    <div class="gs-cate base-color">
+        <div class="gs-cate-title">品类排名</div>
+        <ul>
+            <li *ngFor="let i of cateList;let index = index;">{{index+1}}、{{i}}</li>
+        </ul>
+    </div>
+
+    <!-- 商品排名 -->
+    <div class="gs-product base-color">
+        <div class="gs-product-title">商品排名</div>
+        <table width="200" border="0" cellspacing="0" cellpadding="0">
+            <tr class="gs-product-list-title">
+                <th></th>
+                <th>型号</th>
+                <th>销售比%</th>
+            </tr>
+            <tr class="gs-product-list-item" *ngFor="let i of productList;let index = index">
+                <td>{{index+1}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.value1}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 全渠道订单额 -->
+    <div class="gs-all base-color">
+        <div class="gs-all-title">全渠道订单额</div>
+        <div class="gs-all-section">
+            <div class="gs-all-section-left">
+                <div class="gs-all-section-left-title">
+                    <span class="tag">¥&nbsp;</span><span class="number">{{dingdanData.soQty}}</span>
+                </div>
+                <div class="gs-all-section-left-content">
+                    <div class="gs-all-section-left-l">
+                        <div>单量</div>
+                        <div><span class="number">{{dingdanData.sodanQty}}</span></div>
+                        <div>快单</div>
+                        <div>{{dingdanData.fast_order}}</div>
+                    </div>
+                    <div class="gs-all-section-left-r">
+                        <div>客户数</div>
+                        <div><span class="number">{{dingdanData.cusQty}}</span></div>
+                        <div>普通订单</div>
+                        <div>{{dingdanData.gen_order}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="gs-all-section-right">
+                <div>近7日累计订单</div>
+                <div>
+                    <span class="number1">{{dingdanData.nea_danQty}} / {{dingdanData.nea_danQty}}</span><span class="text">笔</span>
+                </div>
+                <div>近7日订单未发货</div>
+                <div>
+                    <span class="number2">{{dingdanData.fut_danQty}}/{{dingdanData.fut_danQty}}</span>笔
+                </div>
+            </div>
+            <!-- 地图 -->
+            <div class="mapEchart" echarts #mapEchart [options]="mapOption" (chartInit)="onChartInit($event)"></div>
+            <!-- <div class="pieEchart" echarts #pieEchart [options]="pieOption" (chartInit)="onChartInit($event)"></div> -->
+        </div>
+    </div>
+
+    <!-- 区域排名 -->
+    <div class="gs-area base-color">
+        <div class="gs-area-title">区域排名</div>
+        <div style="height: 210px;" class="areaEchart" echarts #areaEchart [options]="areaOption" (chartInit)="onChartInit($event)"></div>
+    </div>
+
+    <!-- 环形图 -->
+    <div id="ring_info" class="ring_info">
+        <div id="ring_top" class="ring_top"  echarts #tringEchart [options]="tringOption" (chartInit)="onChartInit($event)"></div>
+        <div id="ring_bottom" class="ring_bottom"  echarts #bringEchart [options]="bringOption" (chartInit)="onChartInit($event)"></div>
+    </div>
+    <!-- 顾客画像分析 -->
+    <!-- <div class="gs-face base-color">
+        <div class="gs-face-title">顾客画像分析</div>
+        <div class="gs-face-section">
+            <div>
+                <img src="./assets/images/people_01.png" alt="男性" />
+                <div>
+                    <div class="title">男性比例</div>
+                    <div class="bili">40%</div>
+                </div>
+            </div>
+            <div>
+                <img src="./assets/images/people_02.png" alt="女性" />
+                <div>
+                    <div class="title">女性比例</div>
+                    <div class="bili">60%</div>
+                </div>
+            </div>
+        </div>
+        <table width="200" border="0" cellspacing="0" cellpadding="0">
+            <tr class="gs-face-list-item" *ngFor="let i of faceList;let index = index">
+                <td>{{i.ageRange}}</td>
+                <td>
+                    <ng-container *ngFor="let item of faceBiliLiat">
+                        <img *ngIf="i.bili>=item" src="../../../assets/images/people_03.png" alt="" />
+                    </ng-container>
+                </td>
+                <td>{{i.bili}}</td>
+            </tr>
+        </table>
+    </div> -->
+</div>

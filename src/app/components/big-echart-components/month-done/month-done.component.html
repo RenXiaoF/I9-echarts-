@@ -1,0 +1,41 @@
+<!-- 大数据看板左上角第二个柱形图 -->
+<!-- <div class="month-done">
+  <div class='md-box' echarts #mdEchart [options]="option" (chartInit)="onChartInit($event)"></div>
+</div> -->
+
+<!-- 表格 -->
+<div style="overflow: hidden;height: 100%;">
+  <!-- 头 -->
+  <div class="table_list">
+    <div>
+      <table id="tableId">
+        <thead class="title">
+          <tr>
+            <th><span>季组</span></th>
+            <th><span>设计中</span></th>
+            <th><span>打样中</span></th>
+            <th><span>已完成</span></th>
+            <th><span>已批板</span></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+  <!-- 内容 -->
+  <div class="table_list">
+    <div style="max-height: 50%;overflow: hidden;">
+      <table id="tableId">
+        <tbody style="max-height: 50%; overflow: hidden;" class="gundong">
+          <tr *ngFor="let item of listData; let i = index" class="table_td">
+            <td>{{ item.season }}</td>
+            <td>{{ item.value1 }}款</td>
+            <td>{{ item.value2 }}款</td>
+            <td>{{ item.value3 }}款</td>
+            <td>{{ item.value4 }}款</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

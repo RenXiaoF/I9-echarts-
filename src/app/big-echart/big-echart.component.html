@@ -1,0 +1,101 @@
+<div class="box container wrap">
+  <div class="header">
+    <div class="logo"><img src="assets/img/LOGO.png" alt=""></div>
+      <div class="head_title">i9云端制造协同平台大数据</div>
+      <div class="time">
+        <div class="now_time">
+            <span class="get_now_time">{{nowTime | date:"yyyy-MM-dd HH:mm:ss"}}</span>
+        </div>
+    </div>
+  </div>
+  <div class="content">
+    <!-- 左边 -->
+    <div class="con-left child-box">
+      <div class="con-left-top width100">
+        <div class="echart-title">PLM设计中心</div>
+        <div class="plm-charts">
+          <app-plm-design-center></app-plm-design-center>
+        </div>
+        <div class="month-echarts">
+          <app-month-done></app-month-done>
+        </div>
+      </div>
+      <div class="con-left-bottom width100">
+        <div class="echart-title">质量监控中心</div>
+        <div class="pie-class">
+          <div class="echarts-pie">
+            <app-pie-con></app-pie-con>
+          </div>
+          <div class="total-class">
+            <app-total-five></app-total-five>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- 中间 -->
+    <div class="con-center child-box">
+      <div class="con-center-top width100">
+        <div class="echart-title">订单中心</div>
+          <app-globalstatus></app-globalstatus>
+      </div>
+      <div class="con-center-bottom width100">
+        <div class="echart-title">MES制造中心</div>
+        <div class="mes-box">
+          <div class="mes-class">
+            <app-mes-class></app-mes-class>
+          </div>
+          <div class="table-charts">
+            <div class="mes-table">
+              <div class="mes-title">生产进度管理</div>
+              <div class="mes-table-box">
+                <app-mes-table></app-mes-table>
+              </div>
+            </div>
+            <!-- <div class="mes-charts">
+              <div class="mes-title">车间月目标完成情况分析</div>
+              <div class="mes-charts-box">
+                <app-mes-bar></app-mes-bar>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右边 -->
+    <div class="con-right child-box">
+      <div class="con-right-top width100">
+        <div class="echart-title">PMC物控中心</div>
+        <div class="pmc-center">
+          <div class="caigou-jindu">
+            <app-schedule></app-schedule>
+          </div>
+          <div class="caigou-bottom">
+            <div class="caigou-class">
+              <app-pmc-class></app-pmc-class>
+            </div>
+            <div class="cunhuo-class">
+              <app-dash-broad></app-dash-broad>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="con-right-bottom width100">
+        <div class="echart-title">计划出货中心</div>
+        <div class="plan-center">
+          <div class="plan-class">
+            <app-plan-class></app-plan-class>
+          </div>
+          <div class="plan-efficiency">
+            <app-four-ring></app-four-ring>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- <div class="footer"></div> -->
+</div>

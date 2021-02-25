@@ -1,0 +1,43 @@
+.five-box{
+    width: 100%;
+    height:100%;
+    .line-box{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 0;
+        .child-box{
+            width: 200px;
+            height: 45px;
+            border: 1px solid #ffffff;
+            .title{
+                height: 50%;
+                background: #07a4f1;
+                color: #ffffff;
+                text-align: center;
+            }
+            .value{
+                height: 50%;
+                background: #75b6e6;
+                color: #000000;
+                text-align: center;
+
+            }
+        }
+        .bottom-box{
+            width: 435px;
+            height: 45px;
+            border: 1px solid #ffffff;
+            .title{
+                height: 50%;
+                color: #ffffff;
+                text-align: center;
+            }
+            .value{
+                height: 50%;
+                color: #000000;
+                text-align: center;
+            }
+        }
+    }
+}

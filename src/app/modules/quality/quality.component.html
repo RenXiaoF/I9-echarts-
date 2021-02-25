@@ -1,0 +1,114 @@
+<!-- <p> quality works! </p> -->
+<div class="container ">
+  <div class="header">
+      <div class="img"><img src="assets/img/logo_2.png" alt=""></div>
+      <h1>{{boardTitle}}</h1>
+      <!-- <div class="time">2020-03-15 16:58 星期五 上次刷新时间：16:55</div> -->
+      <div class="time">
+          <div class="now_week">
+            <span>第{{nowTime | date:"w"}}周</span>
+          </div>
+          <div class="now_time">
+              <span class="get_now_time">{{nowTime | date:"yyyy-MM-dd HH:mm:ss"}}</span>
+          </div>
+      </div>
+  </div>
+  <div class="info">
+      <div class="info_left">
+          <div class="info_quality">
+              <div>款式</div>
+              <div>{{details.styleNo}}</div>
+          </div>
+          <div class="info_order">
+              <div>
+                <div>{{details.groupNo}}</div>
+              </div>
+              <div class="info_con">
+                <span>订单：{{details.order}}</span>
+              </div>
+              <div class="info_con">
+                <span>生产单：{{details.productionOrder}}</span>
+              </div>
+          </div>
+      </div>
+      <div class="info_right">
+        <div class="leader">
+            <div>QC:{{details.responsiblePerson}}</div>
+            <div>出勤：{{details.attendance}}</div>
+        </div>
+        <div class="groups">
+            <div class="groups_one">
+                <div>{{reWorkNumber.nameOne}}</div>
+                <div class="groups_value">
+                    <span class="value_text">返修数：</span>
+                    <span class="value_num">{{reWorkNumber.reworkOne}}</span>
+                </div>
+            </div>
+            <div class="groups_one">
+                <div>{{reWorkNumber.nametwo}}</div>
+                <div class="groups_value">
+                    <span class="value_text">返修数：</span>
+                    <span class="value_num">{{reWorkNumber.reworkTwo}}</span>
+                </div>
+            </div>
+            <div class="groups_one">
+                <div>{{reWorkNumber.nameThree}}</div>
+                <div class="groups_value">
+                    <span class="value_text">返修数：</span>
+                    <span class="value_num">{{reWorkNumber.reworkThree}}</span>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="wofan">
+  <div class="data">
+    <!-- 疵 点图 -->
+      <div id="data_left" class="fl">
+        <app-defect-quality></app-defect-quality>
+      </div>
+      <div class="data_right">
+         <!-- pie 饼状图 -->
+          <div id="data_right">
+            <app-pie-quality></app-pie-quality>
+          </div>
+          <div class="con">
+              <div class="con_top">
+                  <div class="con_box">
+                      <div class="label_text">订单数</div>
+                      <div class="value_text order_num">{{details.planAmount}}</div>
+                  </div>
+                  <div class="con_box">
+                      <div class="label_text orange">目标数</div>
+                      <div class="value_text yellow plan_num">{{details.completedAmount}}</div>
+                  </div>
+
+              </div>
+              <div class="con_top">
+                  <div class="con_box">
+                      <div class="label_text purple">检验数</div>
+                      <div class="value_text violet check_num">{{details.chickAmount}}</div>
+                  </div>
+                  <div class="con_box">
+                      <div class="label_text red">返工数</div>
+                      <div class="value_text pink back_num">{{details.cutAmount}}</div>
+                  </div>
+
+              </div>
+              <div class="con_top">
+                  <div class="con_box">
+                      <div class="label_text label_botton orange">返工率</div>
+                      <div class="value_text value_bottom yellow back_per">{{details.reworkRate}}</div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+
+
+  </div>
+</div>
+
+
+</div>

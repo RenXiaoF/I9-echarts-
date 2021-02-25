@@ -1,0 +1,232 @@
+.wrap-gs {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .gs-cate .gs-cate-title,
+  .gs-product .gs-product-title,
+  .gs-area .gs-area-title,
+  .gs-face .gs-face-title,
+  .gs-all .gs-all-title {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  // .gs-title {
+  //     display: flex;
+  //     .bg1 {
+  //         flex: 1;
+  //         width: 100%;
+  //         min-height: 50px;
+  //         background: url('../../../assets/images/bg_01.png') no-repeat;
+  //         background-size: 100% 55px;
+  //     }
+  //     .bg2 {
+  //         display: flex;
+  //         flex: 2;
+  //         align-items: center;
+  //         justify-content: center;
+  //         color: #fff;
+  //         font-weight: 600;
+  //         font-size: 27px;
+  //         background: url('../../../assets/images/bg_02.png') no-repeat;
+  //         background-size: 100% 55px;
+  //     }
+  //     .bg3 {
+  //         flex: 1;
+  //         background: url('../../../assets/images/bg_03.png') no-repeat;
+  //         background-size: 100% 55px;
+  //     }
+  // }
+  .gs-cate {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    ul {
+      margin-bottom: 5px;
+    }
+    li {
+      margin: 7px 0;
+      font-size: 13px;
+    }
+  }
+  .gs-product {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    table {
+      font-size: 13px;
+    }
+    tr {
+      height: 20px;
+    }
+    .gs-product-list-title,
+    .gs-product-list-item {
+      text-align: left;
+      td:nth-of-type(1) {
+        padding: 0 10px;
+      }
+      th:nth-of-type(2),
+      td:nth-of-type(2) {
+        padding: 0 20px 0 10px;
+      }
+    }
+    .gs-product-list-item:nth-child(even) {
+      background: rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+  .gs-all {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 500px;
+    height: 450px;
+    text-align: left;
+    transform: translateX(-50%);
+    .gs-all-section {
+      position: relative;
+      .gs-all-section-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 250px;
+        .gs-all-section-left-title {
+          color: #fed44a;
+          font-weight: 600;
+          .tag {
+            font-size: 32px;
+          }
+          .number {
+            font-size: 45px;
+          }
+        }
+        .gs-all-section-left-content {
+          display: flex;
+          font-size: 13px;
+          & > div {
+            flex: 1;
+            div {
+              margin: 2px 0;
+            }
+            .number {
+              font-weight: 600;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .gs-all-section-right {
+        position: absolute;
+        top: 0;
+        right: 80px;
+        z-index: 999;
+        font-size: 13px;
+        div {
+          margin: 2px 0;
+        }
+        .number1 {
+          font-weight: 600;
+          font-size: 28px;
+        }
+        .number2 {
+          font-weight: 600;
+          font-size: 13px;
+        }
+        .text {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .gs-area {
+    position: absolute;
+    bottom: 70px;
+    left: 30px;
+    width: 300px;
+    height: 200px;
+  }
+  .gs-face {
+    position: absolute;
+    right: 30px;
+    bottom: 70px;
+    width: 200px;
+    height: 200px;
+    .gs-face-section {
+      display: flex;
+      margin-top: 20px;
+      & > div {
+        flex: 1;
+        img {
+          float: left;
+          width: 40px;
+          height: 40px;
+          margin-right: 5px;
+        }
+        .title {
+          font-size: 12px;
+        }
+        .bili {
+          color: #fdd34a;
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+    }
+    table {
+      font-size: 13px;
+    }
+    tr {
+      height: 20px;
+      td {
+        padding: 0 10px;
+      }
+      td:nth-of-type(2) {
+        padding: 0 0 0 10px;
+      }
+    }
+    img {
+      width: 9px;
+      height: auto;
+      vertical-align: middle;
+    }
+    .gs-face-list-item:nth-child(even) {
+      text-align: left;
+      background: rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+}
+
+.mapEchart {
+  width: 650px;
+  height: 557px;
+  padding-top: 100px;
+  transform: translateX(-50px);
+  top: -45px;
+  left: -70px;
+}
+
+// 饼图
+.pieEchart {
+  position: absolute;
+  right: -19px;
+  bottom: 62px;
+  width: 180px;
+  height: 155px;
+}
+
+/* ??? */
+.ring_info {
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  width: 200px;
+  height: 250px;
+}
+
+.ring_info .ring_top {
+  width: 100%;
+  height: 50%;
+}
+.ring_info .ring_bottom {
+  width: 100%;
+  height: 50%;
+}

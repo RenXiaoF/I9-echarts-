@@ -1,0 +1,278 @@
+<div class="container ">
+    <div class="header">
+      <!-- <div><img src="./img/logo.png" alt=""></div> -->
+      <div class="img"><img src="assets/img/logo_2.png" alt=""></div>
+      <h1>车间效率管理看板</h1>
+      <!-- 第N周  时间 -->
+      <div class="time">
+        <div class="now_week">
+            <span>第{{nowTime | date:"w"}}周</span>
+        </div>
+        <div class="now_time">
+            <span class="get_now_time">{{nowTime | date:"yyyy-MM-dd HH:mm:ss"}}</span>
+        </div>
+      </div>
+    </div>
+    <!-- 数据内容 -->
+    <div class="con">
+      <!-- 左侧 -->
+        <!-- <div class="con_left" *ngIf="details.styleNo"> -->
+        <div class="con_left" >
+            <div class="header flex_between header_title">
+                <div>款号</div>
+                <div>{{details.groupNo}}</div>
+                <div>{{details.responsiblePerson}}</div>
+            </div>
+            <div class="info">
+                <div class="info_left">
+                    <div class="info_quality">
+                        <div>{{details.styleNo}}</div>
+                    </div>
+                    <div class="info_order">
+                        <div class="info_con info_con_top">
+                            <span>订单：{{details.order}}</span>
+                            <span>上线：{{details.startDate}}</span>
+                        </div>
+                        <div class="info_con info_con_bottom">
+                            <span>生产单：{{details.productionOrder}}</span>
+                            <span>下线：{{details.endDate}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="total flex_center">
+                <div>{{details.planAmount}}</div>
+                <div>{{details.cutAmount}}</div>
+                <div>{{details.completedAmount}}</div>
+            </div>
+
+            <div class="table_one;">
+                <table class="today_product" border="1" style="width: 100%; text-align: center;">
+                    <tbody>
+                        <tr style="background: #002492; color: #ffffff;">
+                            <td>款号</td>
+                            <td>目标</td>
+                            <td>上午</td>
+                            <td>下午</td>
+                            <td>加班</td>
+                            <td>完成</td>
+                            <td>差</td>
+                            <td>完成率</td>
+                            <td>效率</td>
+                        </tr>
+                    </tbody>
+                    <tr style="background: #d4e6f2" *ngFor="let data of dailyOutputList">
+                        <td>{{data.styleNo}}</td>
+                        <td>{{data.target}}</td>
+                        <td>{{data.morning}}</td>
+                        <td>{{data.alternoon}}</td>
+                        <td>{{data.overtime}}</td>
+                        <td>{{data.completed}}</td>
+                        <td>{{data.bad}}</td>
+                        <td>{{data.completionRate}}</td>
+                        <td>{{data.efficiency*100}}%</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table_two">
+                <table class="week_product" border="1" style="width: 100%; text-align: center;">
+                    <tbody>
+                        <tr style="background: #0662c9; color: #ffffff;">
+                            <td>本周</td>
+                            <td>3/11</td>
+                            <td>3/12</td>
+                            <td>3/13</td>
+                            <td>3/14</td>
+                            <td>3/15</td>
+                            <td>3/16</td>
+                            <td>3/17</td>
+                            <td>合格</td>
+                        </tr>
+                    </tbody>
+                    <tr style="background: #d4e6f2">
+                        <td style="background: #0063c8;color: #ffffff;">目标</td>
+                        <td>600</td>
+                        <td>600</td>
+                        <td>650</td>
+                        <td>650</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>2500</td>
+                    </tr>
+
+                    <tr style="background: #d4e6f2">
+                        <td style="background: #0063c8;color: #ffffff;">实际 </td>
+                        <td>580</td>
+                        <td>630</td>
+                        <td>680</td>
+                        <td>630</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>2520</td>
+                    </tr>
+
+                    <tr style="background: #d4e6f2">
+                        <td style="background: #0063c8;color: #ffffff;">完成率</td>
+                        <td>97%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>97%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>98%</td>
+                    </tr>
+
+                    <tr style="background: #d4e6f2">
+                        <td style="background: #0063c8;color: #ffffff;">效率</td>
+                        <td>93%</td>
+                        <td>98%</td>
+                        <td>98%</td>
+                        <td>92%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>95%</td>
+                    </tr>
+
+                    <tr style="background: #d4e6f2">
+                        <td style="background: #0063c8;color: #ffffff;">合格数</td>
+                        <td>575</td>
+                        <td>620</td>
+                        <td>676</td>
+                        <td>628</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>2499</td>
+                    </tr>
+
+                    <tr style="background: #d4e6f2">
+                        <td style="background: #0063c8;color: #ffffff;">合格率</td>
+                        <td>99%</td>
+                        <td>98%</td>
+                        <td>99%</td>
+                        <td>99%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>99%</td>
+                    </tr>
+
+                    <tr style="background: #d4e6f2">
+                        <td style="background: #0063c8;color: #ffffff;">返修数</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>21</td>
+                    </tr>
+
+                    <tr style="background: #d4e6f2">
+                        <td style="background: #0063c8;color: #ffffff;">返修率</td>
+                        <td>1%</td>
+                        <td>2%</td>
+                        <td>1%</td>
+                        <td>1%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>1%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- 右侧 -->
+        <div class="con_right">
+            <div class="con_left_header">
+                出勤：{{details.attendance}}人
+            </div>
+            <div class="flex_center">
+                <div class="quality">
+                    <div class="title">
+                        总用时
+                    </div>
+                    <div class="flex_between">
+                        <div class="value_box">
+                            <div class="value">标准(Min)</div>
+                            <div class="value rule_min">{{progress.standardTime}}</div>
+                        </div>
+                        <div class="value_box">
+                            <div class="value">实际(Min)</div>
+                            <div class="value now_min">{{progress.actualTime}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quality">
+                    <div class="title">
+                        SAM
+                    </div>
+                    <div class="flex_between">
+                        <div class="value_box">
+                            <div class="value">标准</div>
+                            <div class="value rule_value">{{progress.samStandard}}</div>
+                        </div>
+                        <div class="value_box">
+                            <div class="value">实际平均</div>
+                            <div class="value now_ave">{{progress.samActual}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plan flex_center">
+                <div class="plan_box">
+                    <div class="box_one">
+                        <div>WIP</div>
+                        <div class="wip_value">{{progress.wip}}</div>
+                    </div>
+                    <div class="box_one">
+                        <div>订单数</div>
+                        <div class="order_value">{{progress.orderAmount}}</div>
+                    </div>
+                </div>
+                <div class="plan_box">
+                    <div class="box_one">
+                        <div>今日效率</div>
+                        <div class="today_value">{{progress.todayEfficiency * 100}}%</div>
+                    </div>
+                    <div class="box_one">
+                        <div>目标数</div>
+                        <div class="plan_value">{{progress.targetAmount}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="inspect">
+                <div class="title">组检</div>
+                <div class="flex_center">
+                    <div class="inspect_box">
+                        <div class="child_box">检验数（件）</div>
+                        <div class="child_box check_value">{{progress.testAmount}}</div>
+                    </div>
+                    <div class="inspect_box">
+                        <div class="child_box">返工数</div>
+                        <div class="child_box back_num">{{progress.reworkAmount}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="star flex_center">
+                <div class="star_box">
+                    <div id="group_star" class="group_star">小组明星</div>
+                    <div id="star_name" class="star_name">{{stars.groupStar}}</div>
+                    <div id="score" class="score">{{(stars.groupScore*100).toFixed(0)}}%</div>
+                </div>
+                <div class="star_box">
+                    <div id="work_shop_star" class="group_star work_shop_start">车间明星</div>
+                    <div id="work_shop_star_name" class="star_name ">{{stars.workshopStar}}</div>
+                    <div id="work_shop_score" class="score ">{{(stars.workshopScore*100).toFixed(0)}}%</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

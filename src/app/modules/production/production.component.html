@@ -1,0 +1,298 @@
+<!-- <p>  production works! </p> -->
+<div class="container box wrap">
+  <div class="header">
+      <div class="logo"><img src="assets/img/LOGO.png" alt=""></div>
+      <div class="head_title">生产制造执行系统大数据看板</div>
+      <div class="time">
+          <div class="now_week">第{{nowTime | date:"w"}}周</div>
+          <div class="now_time">
+              <span class="get_now_time">{{nowTime | date:"yyyy-MM-dd HH:mm:ss"}}上次刷新时间：{{updateTime | date:"yyyy-MM-dd HH:mm:ss"}}</span>
+          </div>
+      </div>
+  </div>
+  <div class="main">
+      <!-- 左侧数据 -->
+      <div class="main_left">
+          <div class="day_target">
+              <!-- 日指标监控 -->
+              <div class="title day_target_title border_bt">
+                  日指标监控
+              </div>
+              <div class="content">
+                  <div class="con_box">
+                      <div class="img"><img src="assets/img02/01.png" alt=""></div>
+                      <div class="text">
+                          <div>日裁剪量</div>
+                          <div class="day_num">{{dayResulrData[0].des1}}</div>
+                      </div>
+                  </div>
+                  <div class="con_box">
+                      <div class="img"><img src="assets/img02/02.png" alt=""></div>
+                      <div class="text">
+                          <div>日线外齐套数</div>
+                          <div class="all_num">{{dayResulrData[0].des2}}</div>
+                      </div>
+                  </div>
+                  <div class="con_box">
+                      <div class="img"><img src="assets/img02/03.png" alt=""></div>
+                      <div class="text">
+                          <div>日上线数</div>
+                          <div class="online_num">{{dayResulrData[0].des3}}</div>
+                      </div>
+                  </div>
+                  <div class="con_box">
+                      <div class="img"><img src="assets/img02/04.png" alt=""></div>
+                      <div class="text">
+                          <div>日检验数</div>
+                          <div class="check_num">{{dayResulrData[0].des4}}</div>
+                      </div>
+                  </div>
+                  <div class="con_box">
+                      <div class="img"><img src="assets/img02/05.png" alt=""></div>
+                      <div class="text">
+                          <div>日包装数</div>
+                          <div class="pack_num">{{dayResulrData[0].des5}}</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- 表格  -->
+          <div class="product">
+            <!-- 表格 1 -->
+            <div  style="overflow: hidden;width: 65%;">
+              <!-- 表格1 头 -->
+              <div class="control_table">
+                <!-- title -->
+                <div class="title control_table_title">
+                  {{tableOfProductTitle}}
+                </div>
+                <div>
+                    <table id="tableId" >
+                      <thead class="title">
+                        <tr>
+                           <!-- <th>序号</th> -->
+                           <th style="width: 15%;" >订单号</th>
+                           <th style="width: 15%;" >产品名称</th>
+                           <th style="width: 15%;" >订单交期</th>
+                           <th style="width: 9%;"  >订单数</th>
+                           <th style="width: 9%;"  >裁剪数</th>
+                           <th style="width: 9%;"  >齐套数</th>
+                           <th style="width: 9%;"  >上线数</th>
+                           <th style="width: 9%;"  >检验数</th>
+                           <th style="width: 9%;"  >整烫数</th>
+                       </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+                <!-- 表格1 内容 -->
+                <div class="control_table">
+                  <div style="max-height: 50%;overflow: hidden;">
+                    <table  id="tableId" style="border-collapse:collapse;">
+                      <tbody style="max-height: 50%; overflow: hidden;" class="gundong">
+                        <tr *ngFor="let item of tableOfProduct; let i = index" class="table_td" style="line-height: 4vh;">
+                          <!-- <td>{{ i + 1 }}</td> -->
+                          <td style="width: 15%;">{{item.des1}}</td>
+                          <td style="width: 15%;" >{{item.des2}}</td>
+                          <td style="width: 15%;" >{{item.des3}}</td>
+                          <td style="width: 9%;" >{{item.des4}}</td>
+                          <td style="width: 9%;" >{{item.des5}}</td>
+                          <td style="width: 9%;" >{{item.des6}}</td>
+                          <td style="width: 9%;" >{{item.des7}}</td>
+                          <td style="width: 9%;" >{{item.des8}}</td>
+                          <td style="width: 9%;" >{{item.des9}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+            </div>
+            <!-- 表格 2 -->
+            <div class="total_table2">
+                <div  class="total_table_title">
+                  {{qualifiedTitle}}
+                </div>
+                <!-- 头 -->
+                <div class="control_table">
+                  <div>
+                    <table class="pass_table" id="tableId">
+                        <caption class="title_bottom" >
+                          <span>小组：{{qualified[0].des1}}</span>
+                           生产制单：{{qualified[0].des2}}
+                          </caption>
+                        <tr>
+                            <th>线外工序</th>
+                            <th>员工姓名</th>
+                            <th>完工数</th>
+                            <th>扎数</th>
+                            <th>返工数</th>
+                        </tr>
+                    </table>
+                  </div>
+                </div>
+                <!-- 内容 -->
+                <div class="control_table">
+                  <div style="max-height: 50%;overflow: hidden;">
+                    <table  id="tableId" style="border-collapse:collapse;">
+                      <tbody style="max-height: 50%; overflow: hidden;" class="gundong">
+                        <tr *ngFor="let item of qualified; let i = index" class="table_td" style="line-height: 4vh;">
+                          <td>{{item.des3}}</td>
+                          <td>{{item.des4}}</td>
+                          <td>{{item.des5}}</td>
+                          <td>{{item.des6}}</td>
+                          <td>{{item.des7}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- 图表 -->
+          <div class="chart">
+            <!-- 车间全格率分析 -->
+              <div class="work_shop border_margin">
+                <div class="title work_shop_title border_bt">
+                  {{workshopTitle}}
+                </div>
+                <div id="work_shop" class="work_shop_con">
+                  <div class="workShopEchart" echarts #workShopEchart [options]="workShop" (chartInit)="onEchartsLoadService($event)"></div>
+                </div>
+              </div>
+              <!-- 车间近7天目标完成情况分析 -->
+              <div class="month_total border_margin">
+                <div class="title month_total_title border_bt">
+                  {{achieveGoalTitle}}
+                </div>
+                <div id="month_total" class="month_total_con">
+                  <div class="workShopEchart" echarts #achieveGoalEchart [options]="achieveGoal" (chartInit)="onEchartsLoadService($event)"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 车间月目标完成情况分析 -->
+            <div class="work_done border_margin">
+                <div class="title work_done_title border_bt">
+                  {{monthGoalTitle}}
+                </div>
+                <div id="work_done" class="work_done_con">
+                  <div class="workShopEchart" echarts #monthGoalEchart [options]="monthGoal" (chartInit)="onEchartsLoadService($event)"></div>
+                </div>
+            </div>
+      </div>
+
+      <!-- 右侧数据 -->
+      <div class="main_right">
+        <!-- 今日完工Top3 -->
+          <div class="today_top border_margin">
+            <div class="title today_top_title border_bt">
+              {{dayTop3Title}}
+            </div>
+            <div class="today_top_con">
+                <div class="top_con_box">
+                    <div class="radius">
+                        <img src="assets/img02/num_1.png" alt="">
+                        <span>1</span>
+                    </div>
+                    <div class="place_name text_class top_one_name">
+                        {{dayTop3[0].des2}}
+                    </div>
+                    <div class="score text_class top_one_num">
+                      {{dayTop3[0].des3}}
+                    </div>
+                </div>
+                <div class="top_con_box">
+                    <div class="radius">
+                        <img src="assets/img02/num_2.png" alt="">
+                        <span>2</span>
+                    </div>
+                    <div class="place_name text_class top_two_name">
+                      {{dayTop3[1].des2}}
+                    </div>
+                    <div class="score text_class top_two_num">
+                      {{dayTop3[1].des3}}
+                    </div>
+                </div>
+                <div class="top_con_box">
+                    <div class="radius">
+                        <img src="assets/img02/num_3.png" alt="">
+                        <span>3</span>
+                    </div>
+                    <div class="place_name text_class top_three_name">
+                      {{dayTop3[2].des2}}
+                    </div>
+                    <div class="score text_class top_three_num">
+                      {{dayTop3[2].des3}}
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- 近7天指标分析 -->
+          <div class="month_analys border_margin">
+            <div class="title border_bt">
+                {{ringTitle}}
+            </div>
+            <div id="ring" class="month_analys_con">
+              <div class="workShopEchart" echarts #ringEchart [options]="ring" (chartInit)="onEchartsLoadService($event)"></div>
+              <div class="workShopEchart" echarts #ringEchart [options]="ring" ></div>
+              <div class="workShopEchart" echarts #ringEchart [options]="ring" ></div>
+              <div class="workShopEchart" echarts #ringEchart [options]="ring" ></div>
+            </div>
+          </div>
+          <!-- 在制品库存分析 -->
+          <div class="product_store border_margin">
+              <div class="title product_store_title border_bt">
+                {{repertoryTitle}}
+              </div>
+              <div class="product_store_con">
+                  <div class="flex_box">
+                      <div class="store_con_box">
+                          <div class="img">
+                            <img src="assets/img02/11.png" alt="">
+                          </div>
+                          <div class="box_text box_text0">
+                             <div class="text_class">{{repertory[0].des1}}</div>
+                             <div class="text_class">{{repertory[0].des2}}单</div>
+                             <div class="blue_text">{{repertory[0].des3}}件</div>
+                          </div>
+                      </div>
+                      <div class="store_con_box">
+                          <div class="img">
+                              <img src="assets/img02/12.png" alt=""></div>
+                          <div class="box_text box_text1">
+                            <div class="text_class">{{repertory[1].des1}}</div>
+                            <div class="text_class">{{repertory[1].des2}}单</div>
+                            <div class="blue_text">{{repertory[1].des3}}件</div>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="flex_box">
+                      <div class="store_con_box">
+                          <div class="img">
+                              <img src="assets/img02/13.png" alt="">
+                          </div>
+                          <div class="box_text box_text2">
+                            <div class="text_class">{{repertory[2].des1}}</div>
+                            <div class="text_class">{{repertory[2].des2}}单</div>
+                            <div class="blue_text">{{repertory[2].des3}}件</div>
+                          </div>
+                      </div>
+                      <div class="store_con_box">
+                          <div class="img">
+                              <img src="assets/img02/14.png" alt="">
+                          </div>
+                          <div class="box_text box_text3">
+                            <div class="text_class">{{repertory[3].des1}}</div>
+                            <div class="text_class">{{repertory[3].des2}}单</div>
+                            <div class="blue_text">{{repertory[3].des3}}件</div>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

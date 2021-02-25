@@ -1,0 +1,521 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  transform-origin: 0 0 0;
+  transition: all 0.5s ease-in-out;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background: url("src/assets/img/bg5.jpg");
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+}
+.container .head_title {
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 35px;
+  line-height: 80px;
+}
+.box {
+  width: 1920px;
+  height: 1080px;
+  background-image: linear-gradient(#16132e, #16132e);
+}
+
+.header {
+  width: 100%;
+  clear: both;
+  position: relative;
+  height: 10vh;
+  background: url("src/assets/img/bg1.png") no-repeat top center,
+    url("src/assets/img/bg2.png") no-repeat top left,
+    url("src/assets/img/bg3.png") no-repeat top right;
+  background-size: auto, 35% 88%, 35% 88%;
+}
+
+.header .time {
+  position: absolute;
+  font-weight: normal;
+  right: 10px;
+  bottom: 0;
+  color: #ffffff;
+  float: right;
+  padding: 10px 0px;
+  /* margin: 6vh 2% 0px 0px; */
+}
+
+.logo {
+  width: 132px;
+  height: 50px;
+  position: absolute;
+  left: 50px;
+  top: 30px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.now_week {
+  font-size: 18px;
+}
+
+.border_bt {
+  border-bottom: 1px solid #0bd5e9;
+}
+
+.main {
+  width: 100%;
+
+  display: flex;
+}
+
+.main_left {
+  /* display: inline-block; */
+  width: 70%;
+
+  padding: 0 10px;
+  /* background: #f6915d; */
+}
+.main_right {
+  /* float: right; */
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* background: #91a5d6; */
+  padding: 0 10px;
+}
+
+.today_top,
+.month_analys,
+.product_store {
+  width: 100%;
+}
+
+.day_target {
+  border: 1px solid #0bd5e9;
+  margin-bottom: 2vh;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 0px;
+  // border-bottom: 1px solid #0bd5e9;
+  line-height: 3vh;
+}
+/* 日指标监控 */
+
+.day_target .content {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0px;
+}
+.con_box {
+  clear: both;
+  padding-top: 15px;
+}
+
+.con_box .img {
+  float: left;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.con_box img {
+  width: 74%;
+  height: 74%;
+}
+
+.con_box .text {
+  display: inline-block;
+}
+.text div:nth-child(1) {
+  color: #ffffff;
+}
+.text div:nth-child(2) {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1397ac;
+}
+
+/* 表格 */
+.product {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2vh;
+}
+#tableId {
+  border-collapse: collapse;
+  max-height: 5rem;
+  overflow: hidden;
+}
+// 表格 1
+.control_table {
+  width: 100%;
+  border: 1px solid #0bd5e9;
+  overflow: hidden;
+  max-height: 9rem;
+}
+
+.control_table table {
+  margin: 0 auto;
+  width: 100%;
+  /* white-space: nowrap; */
+}
+
+.control_table table tr:nth-child(1) {
+  border-top: 1px solid #0bd5e9;
+}
+
+.control_table table th,
+td {
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 0px;
+}
+
+//  表格 2
+.total_table2 {
+  width: 33%;
+  border: 1px solid #0bd5e9;
+  overflow: hidden;
+  height: 13.5rem;
+}
+.total_table_title {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 0px;
+  // border-bottom: 1px solid #0bd5e9;
+  line-height: 3vh;
+}
+
+.pass_table {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 0px;
+  line-height: 3vh;
+  // border-bottom: 1px solid #0bd5e9;
+}
+
+.total_table2 table {
+  width: 100%;
+  margin: 0 auto;
+  /* white-space: nowrap; */
+}
+
+.title_bottom {
+  border: 1px solid #0bd5e9;
+  color: #ffffff;
+  padding: 6px 7px;
+  border-top: 0;
+}
+.title_bottom span {
+  margin-right: 10px;
+}
+
+.total_table2 th,
+td {
+  width: 20%;
+  font-size: 13px;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  padding: 1px 0px;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+// 奇数行 显示的颜色
+.control_table table .table_td:nth-child(odd) {
+  background: #16132e;
+}
+// 偶数行  显示的颜色
+.control_table table .table_td:nth-child(even) {
+  background: #27243c;
+}
+// 滚动
+.gundong {
+  -webkit-animation: 14s gundong linear infinite normal;
+  animation: 14s gundong linear infinite normal;
+  position: relative;
+}
+
+@keyframes gundong {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -15vh, 0);
+    transform: translate3d(0, -15vh, 0);
+  }
+}
+
+/* 图表 */
+.chart {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.work_shop {
+  width: 33%;
+}
+.work_shop_con {
+  height: 23vh;
+}
+
+.workShopEchart {
+  height: 210px;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.month_total {
+  width: 65%;
+}
+
+.month_total_con {
+  height: 23vh;
+}
+
+.work_done {
+  margin-top: 3vh;
+}
+.work_done_con {
+  height: 20vh;
+}
+
+/* 右侧样式 */
+.border_margin {
+  border: 1px solid #0bd5e9;
+}
+/* .today_top{
+
+
+} */
+
+.today_top .today_top_con {
+  height: 18vh;
+  padding-top: 2vh;
+}
+
+.today_top .today_top_con .top_con_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 5vh;
+  line-height: 5vh;
+}
+
+.place_name {
+  width: 50px;
+}
+.score {
+  width: 50px;
+}
+
+.today_top_con .radius {
+  position: relative;
+}
+
+.radius span {
+  position: absolute;
+  color: #000000;
+  font-weight: 600;
+  left: 40%;
+  top: 0;
+}
+
+.radius img {
+  width: 35px;
+  height: 30px;
+}
+
+.text_class {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.month_analys {
+  margin: 3.3vh 0;
+}
+
+.month_analys_con {
+  height: 22vh;
+}
+
+/* 在制品库存分析 */
+/* .product_store{
+
+} */
+
+.product_store_con {
+  padding: 4rem 0px;
+}
+.flex_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2vh;
+  clear: both;
+}
+
+.store_con_box .img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.store_con_box img {
+  width: 100%;
+  height: 100%;
+  vertical-align: text-top;
+}
+
+.store_con_box .box_text {
+  display: inline-block;
+}
+
+.box_text .blue_text {
+  font-size: 16px;
+  color: #45d3e1;
+  font-weight: 600;
+}
+@media screen and (min-width: 330px) and (max-width: 520px) {
+}
+/* 729尺寸 */
+@media screen and (max-width: 730px) {
+  h1 {
+    font-size: 20px;
+  }
+  * {
+    font-size: 10px;
+  }
+  .con_box .text {
+    font-size: 10px;
+  }
+  .product {
+    display: block;
+  }
+  .content {
+    display: block;
+  }
+  .control_table {
+    margin: 2% 0px;
+    width: 100%;
+  }
+
+  .total_table {
+    width: 100%;
+  }
+  .main_left {
+    display: block;
+    width: 100%;
+  }
+  .main_right {
+    display: block;
+    width: 100%;
+    margin-top: 3%;
+  }
+  .chart {
+    display: block;
+  }
+  .border_margin {
+    width: 100%;
+  }
+  .con_box img {
+    width: 60%;
+    height: 60%;
+  }
+}
+@media screen and (min-width: 731px) and (max-width: 1000px) {
+  h1 {
+    font-size: 30px;
+  }
+  .product {
+    display: block;
+  }
+  .control_table {
+    margin: 2% 0px;
+    width: 100%;
+  }
+  .total_table {
+    width: 100%;
+  }
+  .main_left {
+    display: block;
+    width: 100%;
+  }
+  .main_right {
+    display: block;
+    width: 100%;
+    margin-top: 3%;
+  }
+}
+@media screen and (min-width: 1106) and (max-width: 1550px) {
+  .title {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .text div:nth-child(1) {
+    font-size: 12px;
+    color: #ffffff;
+  }
+  table {
+    font-size: 10px;
+  }
+  .text div:nth-child(2) {
+    font-size: 10px;
+  }
+  .work_done {
+    margin-top: 1vh;
+  }
+  .work_done_con {
+    height: 20vh;
+  }
+  /* 电 */
+  .work_shop_con {
+    height: 20vh;
+  }
+  /* 车金木 */
+  .month_total_con {
+    height: 20vh;
+  }
+
+  body {
+    height: 90%;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .now_week {
+    font-size: 18px;
+    text-align: right;
+  }
+}

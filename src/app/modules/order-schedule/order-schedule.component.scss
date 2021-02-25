@@ -1,0 +1,181 @@
+.container {
+  /* overflow-y: hidden; */
+  width: 100%;
+  height: 100%;
+  /* border-top: 1px solid #0a0a16; */
+  /* background: #251d4e; */
+
+  background: url('src/assets/img/bg5.jpg');
+
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+}
+
+.container .head_title {
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 3rem;
+  line-height: 80px;
+  /* margin-bottom: 80px; */
+  /* height: 10vh; */
+}
+
+.header {
+  width: 100%;
+  clear: both;
+  position: relative;
+  height: 15vh;
+  background: url('src/assets/img/bg1.png') no-repeat top center, url('src/assets/img/bg2.png') no-repeat top left, url('src/assets/img/bg3.png') no-repeat top right;
+  background-size: auto, 35% 68%, 35% 68%;
+}
+
+.header .time {
+  width: 200px;
+  /* float: right; */
+  /* padding-top: 35px; */
+  font-size: 1.2rem;
+  font-weight: normal;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  color: #ffffff;
+
+}
+
+.logo {
+  width: 200px;
+  height: 70px;
+  position: absolute;
+  left: 50px;
+  top: 40px;
+
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+
+}
+
+.content {
+  width: 100%;
+  height: 80%;
+  /* background: cyan; */
+}
+
+.content .list {
+  width: 95%;
+  height: 100%;
+  /* background: darkcyan; */
+  margin: 0 auto;
+}
+
+.list table {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #0bd5e9;
+  color: #ffffff;
+  box-sizing: border-box;
+
+
+}
+
+.list table tr {
+  border: 1px solid #0bd5e9;
+}
+
+.list table tr th {
+  font-size: 1.2rem;
+  height: 10%;
+  text-align: center;
+  border-left: 1px solid #0bd5e9;
+  border-right: 1px solid #0bd5e9;
+}
+
+.list table tr th:nth-child(1) {
+  width: 8%;
+}
+
+.list table tr th:nth-child(2) {
+  width: 8%;
+}
+
+.list table tr th:nth-child(3) {
+  width: 8%;
+}
+
+.list table tr th:nth-child(4) {
+  width: 8%;
+}
+
+.list table tr th:nth-child(5) {
+  width: 8%;
+}
+
+.list table tr th:nth-child(6) {
+  width: 8%;
+}
+
+.list table tr th:nth-child(7) {
+  width: 8%;
+}
+
+.list table tr th:nth-child(8) {
+  width: 12%;
+}
+
+.list table tr th:nth-child(9) {
+  width: 12%;
+}
+
+.list table tr th:nth-child(10) {
+  width: 20%;
+}
+
+
+.list table tr td {
+  font-size: 1.2rem;
+  text-align: center;
+  border-left: 1px solid #0bd5e9;
+  border-right: 1px solid #0bd5e9;
+}
+
+/* @media  screen and (width:960px) and (height:540px){ */
+@media screen and (max-width:961px) and (min-width:900px) {
+  .logo {
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    left: 50px;
+    top: 40px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+
+  html body .head_title {
+    font-size: 3rem;
+  }
+
+  .header .time {
+    font-size: 1.5rem;
+    right: -10px;
+  }
+
+  .content {
+    height: 70%;
+    position: relative;
+  }
+
+  .list table tr th {
+    font-size: 1.5rem;
+  }
+
+  .list table tr td {
+    font-size: 1.5rem;
+  }
+}

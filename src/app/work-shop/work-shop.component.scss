@@ -1,0 +1,117 @@
+$base-border: 1px solid #07fefe;
+
+.wrap {
+
+  width: 1920px;
+  height: 1080px;
+  background: #050d94;
+  transform-origin: 0 0 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: url("src/assets/img/bg5.jpg");
+}
+.container .head_title {
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 35px;
+  line-height: 80px;
+}
+
+.header .time {
+  width: 500px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  color: #ffffff;
+}
+.logo {
+  width: 132px;
+  height: 50px;
+  position: absolute;
+  left: 50px;
+  top: 30px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.now_week {
+  font-size: 18px;
+}
+
+.box {
+  width: 1920px;
+  height: 1080px;
+
+  background-image: linear-gradient(#16132e, #16132e);
+
+  .header {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    height: 100px;
+    line-height: 60px;
+    background: url("src/assets/img/bg1.png") no-repeat top center,
+      url("src/assets/img/bg2.png") no-repeat top left,
+      url("src/assets/img/bg3.png") no-repeat top right;
+    background-size: auto, 35% 88%, 35% 88%;
+  }
+
+  .content {
+    width: 1900px;
+    height: 950px;
+    margin: 0 auto;
+    // border: $base-border;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .row-box {
+      display: flex;
+      height: 300px;
+      justify-content: space-around;
+
+      // border: $base-border;
+      .col-box {
+        height: 100%;
+        width: 610px;
+        border: $base-border;
+      }
+    }
+  }
+}
+
+.order-class {
+  padding: 1% 0 0 3%;
+
+  .finish {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 50px;
+  }
+
+  .finish-value {
+    line-height: 50px;
+
+    span:nth-child(1) {
+      font-size: 20px;
+      font-weight: 600;
+      color: #f8b62a;
+    }
+
+    span:nth-child(2) {
+      font-size: 25px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+  }
+}

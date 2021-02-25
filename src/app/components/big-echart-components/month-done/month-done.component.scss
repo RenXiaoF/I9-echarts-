@@ -1,0 +1,94 @@
+// .month-done{
+//     width: 100%;
+//     height: 100%;
+//     .md-box{
+//         width: 100%;
+//         height: 100%;
+
+//     }
+// }
+
+/* 表格 */
+.mes_table {
+  width: 100%;
+  display: flex;
+}
+
+.table_list {
+  width: 100%;
+  // height: 100%;
+  overflow: hidden;
+  // border-right: 1px solid #07fefe;
+}
+
+#tableId {
+  border-collapse: collapse;
+  max-height: 5rem;
+  overflow: hidden;
+}
+.title{
+  color: white;
+  // background: url('src/assets/img/19.png');
+  // background: -webkit-linear-gradient(left, rgba(255,255,255,0.1), rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+}
+
+.table_title {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid hsl(180, 99%, 51%);
+}
+
+.table_list table {
+  width: 100%;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.table_list table tr th {
+  height: 37px;
+  width: 20%;
+  // border: 1px solid #07fefe !important;
+}
+.table_list table tr  {
+  height: 37px;
+}
+
+.table_list table th {
+  color: #ffffff;
+  text-align: center;
+  font-size: 5px;
+}
+
+.table_list table td {
+  color: #ffffff;
+  text-align: center;
+  font-size: 5px;
+}
+// 奇数行 显示的颜色
+.table_list table .table_td:nth-child(odd) {
+  background: #16132E;
+}
+// 偶数行  显示的颜色
+.table_list table .table_td:nth-child(even) {
+  background: #27243C;
+}
+
+.gundong {
+  -webkit-animation: 14s gundong linear infinite normal;
+  animation: 14s gundong linear infinite normal;
+  position: relative;
+
+}
+
+@keyframes gundong {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -20vh, 0);
+    transform: translate3d(0, -20vh, 0);
+  }
+}

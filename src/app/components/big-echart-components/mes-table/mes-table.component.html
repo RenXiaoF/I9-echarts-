@@ -1,0 +1,45 @@
+<!-- 下方表格 -->
+
+<div style="overflow: hidden; height: 100%">
+  <div class="table_list">
+    <div>
+      <table id="tableId">
+        <thead class="title">
+          <tr>
+            <!-- <th></th> -->
+            <th><span>订单</span></th>
+            <th><span>款号</span></th>
+            <th><span>货期</span></th>
+            <th><span>订单数</span></th>
+            <th><span>裁剪数</span></th>
+            <th><span>线外齐套数</span></th>
+            <th><span>上线数</span></th>
+            <th><span>检验数</span></th>
+            <th><span>整烫数</span></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+
+  <div class="table_list">
+    <div style="max-height: 50%; overflow: hidden">
+      <table id="tableId">
+        <tbody style="max-height: 50%; overflow: hidden;" class="gundong">
+          <tr *ngFor="let item of listData; let i = index" class="table_td">
+            <!-- <td>{{ i + 1 }}</td> -->
+            <td>{{ item.mpsid }}</td>
+            <td>{{ item.codeNM }}</td>
+            <td>{{ item.RequireDate.substring(5) }}</td>
+            <td class="font_color">{{ item.mpsQty }}</td>
+            <td>{{ item.cutQty }}</td>
+            <td>{{ item.outlineQty }}</td>
+            <td class="font_color">{{ item.onlineQty }}</td>
+            <td>{{ item.checkQty }}</td>
+            <td>{{ item.hqty }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

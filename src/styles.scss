@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+// *{
+//     @media screen and (min-width: 0px){
+//         font-size : 19px !important;
+//     }
+//     @media screen and (min-width: 340px){
+//         font-size : 12px !important;
+//     }
+//     @media screen and (min-width: 500px){
+//         font-size : 13px !important;
+//     }
+//     @media screen and (min-width: 728px){
+//         font-size : 14px !important;
+//     }
+// }
+body {
+    margin: 0;
+    padding: 0;
+    overflow: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+// 基础颜色
+.base-color {
+    color: #09FEFE;
+}

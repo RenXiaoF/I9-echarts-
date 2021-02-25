@@ -1,0 +1,216 @@
+$base-border: 1px solid #07fefe;
+.container {
+  width: 100%;
+  height: 100%;
+  background: url("src/assets/img/bg5.jpg");
+
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+}
+.logo {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+  left: 50px;
+  top: 40px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+.container .head_title {
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 2.5rem;
+  line-height: 90px;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background: #050d94;
+  transform-origin: 0 0 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.box {
+  width: 1920px;
+  height: 1080px;
+
+  background-image: linear-gradient(#16132e, #16132e);
+  .header {
+    width: 100%;
+    clear: both;
+    position: relative;
+    height: 15vh;
+    background: url("src/assets/img/bg1.png") no-repeat top center,
+      url("src/assets/img/bg2.png") no-repeat top left,
+      url("src/assets/img/bg3.png") no-repeat top right;
+    background-size: auto, 35% 90%, 35% 90%;
+  }
+
+  .header .time {
+    width: 500px;
+    font-size: 2rem;
+    font-weight: normal;
+    position: absolute;
+    top: 50px;
+    right: -232px;
+    color: #ffffff;
+
+    .now_time .get_now_time {
+      font-size: 1.15rem;
+    }
+  }
+
+  .content {
+    width: 100%;
+    height: 1000px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    .child-box {
+      // border:$base-border;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      .width100 {
+        width: 100%;
+        .echart-title {
+          width: 100%;
+          height: 40px;
+          font-size: 20px;
+          font-weight: 600;
+          color: #2af5f1;
+          text-align: center;
+          line-height: 40px;
+          border-bottom: $base-border;
+        }
+      }
+    }
+    .con-left {
+      width: 25%;
+      .con-left-top {
+        height: 50%;
+        border: $base-border;
+        .plm-charts {
+          width: 100%;
+          height: 50%;
+          // border:$base-border;
+        }
+
+        .month-echarts {
+          width: 100%;
+          height: 40%;
+          // border:$base-border;
+        }
+      }
+      .con-left-bottom {
+        height: 48%;
+        border: $base-border;
+
+        // 质量监控中心
+        .pie-class {
+          .echarts-pie {
+            height: 240px;
+
+            // border:$base-border;
+          }
+
+          .total-class {
+            height: 180px;
+            // border:$base-border;
+          }
+        }
+      }
+    }
+    .con-center {
+      width: 48%;
+      .con-center-top {
+        height: 60%;
+        border: $base-border;
+      }
+      // MES制造中心
+      .con-center-bottom {
+        height: 38%;
+        border: $base-border;
+        .mes-box {
+          width: 100%;
+          height: 324px;
+          .mes-class {
+            height: 74px;
+            border-bottom: $base-border;
+          }
+          .table-charts {
+            display: flex;
+            height: 250px;
+            .mes-title {
+              height: 24px;
+              color: #ffffff;
+              text-align: center;
+              border-bottom: $base-border;
+            }
+            .mes-table {
+              // width: 65%;
+              width: 100%;
+            }
+            .mes-charts {
+              width: 35%;
+            }
+          }
+        }
+      }
+    }
+    .con-right {
+      width: 25%;
+      .con-right-top {
+        height: 50%;
+        border: $base-border;
+        .pmc-center {
+          height: 440px;
+          .caigou-jindu {
+            height: 220px;
+            // border:$base-border;
+          }
+          .caigou-bottom {
+            height: 220px;
+            // border:$base-border;
+            display: flex;
+            .caigou-class {
+              width: 65%;
+              // border:$base-border;
+            }
+            .cunhuo-class {
+              width: 35%;
+              // border:$base-border;
+              position: relative;
+            }
+          }
+        }
+      }
+      .con-right-bottom {
+        height: 48%;
+        border: $base-border;
+        .plan-center {
+          height: 420px;
+          .plan-class {
+            height: 210px;
+            // border:$base-border;
+          }
+          .plan-efficiency {
+            height: 210px;
+            // border:$base-border;
+          }
+        }
+      }
+    }
+  }
+}

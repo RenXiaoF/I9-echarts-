@@ -1,0 +1,36 @@
+<div class="container box wrap">
+  <div class="header">
+    <div class="logo"><img src="assets/img/LOGO.png" alt=""></div>
+    <div class="head_title">智能车间看板</div>
+    <div class="time">
+      <!-- <div class="now_week">第{{nowTime | date:"w"}}周</div> -->
+      <div class="now_time">
+          <span class="get_now_time">{{nowTime | date:"yyyy-MM-dd HH:mm:ss"}}</span>
+          <!-- 16:58 星期五 上次刷新时间：16:55 -->
+      </div>
+  </div>
+  </div>
+  <div class="content">
+    <div class="row-box">
+      <div class="col-box" echarts #oneEchart  [options]="boxOne" (chartInit)="onEchartsLoadService($event)"></div>
+      <div class="col-box order-class">
+        <div class="finish">单月订单完成情况（件）</div>
+        <div class="finish-value"><span>{{data_one.des1}}单</span><span>{{data_one.des2}}</span></div>
+        <div class="finish">单月订单超期情况（件）</div>
+        <div class="finish-value"><span>{{data_two.des1}}单</span><span>{{data_two.des2}}</span></div>
+      </div>
+      <div class="col-box" echarts #threeEchart [options]="boxThree" (chartInit)="onEchartsLoadService($event)"></div>
+    </div>
+    <div class="row-box">
+      <div class="col-box"  echarts #fourEchart [options]="boxFour" (chartInit)="onEchartsLoadService($event)"></div>
+      <div class="col-box"  echarts #fiveEchart [options]="boxFive" (chartInit)="onEchartsLoadService($event)"></div>
+      <div class="col-box"  echarts #sixEchart [options]="boxSix" (chartInit)="onEchartsLoadService($event)"></div>
+    </div>
+    <div class="row-box">
+      <div class="col-box"  echarts #sevenEchart [options]="boxSeven" (chartInit)="onEchartsLoadService($event)"></div>
+      <div class="col-box"  echarts #eightEchart [options]="boxEight" (chartInit)="onEchartsLoadService($event)"></div>
+      <div class="col-box"  echarts #nineEchart [options]="boxNine" (chartInit)="onEchartsLoadService($event)"></div>
+    </div>
+  </div>
+
+</div>

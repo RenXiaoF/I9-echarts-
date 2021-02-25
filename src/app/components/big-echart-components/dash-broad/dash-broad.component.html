@@ -1,0 +1,15 @@
+<!-- 仪表盘 -->
+<div class="dash-box">
+  <div class="dash_info">
+    <div class="dash_text clear">
+      <div class="dash_title">存货预警</div>
+      <div class="dash_unit">单位：天</div>
+      <div class="dash_day">
+        <div>60天</div>
+        <div>180天</div>
+        <div>360天</div>
+      </div>
+    </div>
+    <div class="echart_box" echarts #dashEchart [options]="option" (chartInit)="onChartInit($event)"></div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="header">
+      <div class="logo"><img src="assets/img/LOGO.png" alt=""></div>
+      <div class="head_title">各组生产线平衡率表</div>
+      <div class="time">
+          <div class="now_time">
+              <span class="get_now_time">{{nowTime | date:"yyyy-MM-dd HH:mm:ss"}} 上次刷新时间：{{updateTime | date:"yyyy-MM-dd HH:mm:ss"}}</span>
+          </div>
+      </div>
+    </div>
+    <div class="content">
+        <div class="list">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>日期</th>
+                        <th>组别</th>
+                        <th>平衡率</th>
+                        <th>款号</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr>
+                        <td>2020年</td>
+                        <td>4A</td>
+                        <td>82%</td>
+                        <td>3146</td>
+                        <td>刚开款</td>
+                    </tr>
+                    <tr>
+                        <td>2020年</td>
+                        <td>4A</td>
+                        <td>82%</td>
+                        <td>3146</td>
+                        <td>刚开款</td>
+                    </tr>
+                    <tr>
+                        <td>2020年</td>
+                        <td>4A</td>
+                        <td>82%</td>
+                        <td>3146</td>
+                        <td>刚开款</td>
+                    </tr>
+                    <tr>
+                        <td>2020年</td>
+                        <td>4A</td>
+                        <td>82%</td>
+                        <td>3146</td>
+                        <td>刚开款</td>
+                    </tr>
+                    <tr>
+                        <td>2020年</td>
+                        <td>4A</td>
+                        <td>82%</td>
+                        <td>3146</td>
+                        <td>刚开款</td>
+                    </tr>
+                    <tr>
+                        <td>2020年</td>
+                        <td>4A</td>
+                        <td>82%</td>
+                        <td>3146</td>
+                        <td>刚开款</td>
+                    </tr>
+                    <tr>
+                        <td>2020年</td>
+                        <td>4A</td>
+                        <td>82%</td>
+                        <td>3146</td>
+                        <td>刚开款</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <div class="bar">
+            <div id="bar_charts">
+                <div class="echart_box" echarts #balanceRateEchart [options]="option" ></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
